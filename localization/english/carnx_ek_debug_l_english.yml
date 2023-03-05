@@ -1,0 +1,13 @@
+﻿l_english:
+ carnx_debug_msg_court_mage_received: "Court Mage court position received"
+ carnx_debug_msg_court_mage_revoked: "Court Mage court position revoked"
+ carnx_debug_msg_court_mage_invalidated: "Court Mage court position invalidated"
+ carnx_debug_msg_loremaster_received: "Loremaster court position received"
+ carnx_debug_msg_loremaster_revoked: "Loremaster court position revoked"
+ carnx_debug_msg_loremaster_invalidated: "Loremaster court position invalidated"
+ carnx_debug_msg_shadowscale_received: "Shadowscale court position received"
+ carnx_debug_msg_shadowscale_revoked: "Shadowscale court position revoked"
+ carnx_debug_msg_shadowscale_invalidated: "Shadowscale court position invalidated"
+ carnx_debug_msg_speaker_received: "Speaker court position received"
+ carnx_debug_msg_speaker_revoked: "Speaker court position revoked"
+ carnx_debug_msg_speaker_invalidated: "Speaker court position invalidated"

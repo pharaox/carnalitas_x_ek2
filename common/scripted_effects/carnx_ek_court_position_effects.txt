@@ -5,9 +5,7 @@ carnx_court_mage_title_accepted_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Court Mage court position received"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_court_mage_received }
 	}
 }
 
@@ -16,9 +14,7 @@ carnx_court_mage_title_revoked_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Court Mage court position revoked"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_court_mage_revoked }
 	}
 }
 
@@ -27,9 +23,7 @@ carnx_court_mage_title_invalidated_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Court Mage court position invalidated"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_court_mage_invalidated }
 	}
 }
 
@@ -41,9 +35,7 @@ carnx_loremaster_title_accepted_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Loremaster court position received"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_loremaster_received }
 	}
 }
 
@@ -53,9 +45,7 @@ carnx_loremaster_title_revoked_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Loremaster court position revoked"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_loremaster_revoked }
 	}
 }
 
@@ -65,9 +55,7 @@ carnx_loremaster_title_invalidated_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Loremaster court position invalidated"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_loremaster_invalidated }
 	}
 }
 
@@ -79,9 +67,7 @@ carnx_shadowscale_title_accepted_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Shadowscale court position received"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_shadowscale_received }
 	}
 }
 
@@ -91,9 +77,7 @@ carnx_shadowscale_title_revoked_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Shadowscale court position revoked"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_shadowscale_revoked }
 	}
 }
 
@@ -103,9 +87,7 @@ carnx_shadowscale_title_invalidated_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Shadowscale court position invalidated"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_shadowscale_invalidated }
 	}
 }
 
@@ -117,9 +99,7 @@ carnx_speaker_title_accepted_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Speaker court position received"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_speaker_received }
 	}
 }
 
@@ -129,9 +109,7 @@ carnx_speaker_title_revoked_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Speaker court position revoked"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_speaker_revoked }
 	}
 }
 
@@ -141,8 +119,6 @@ carnx_speaker_title_invalidated_effect = {
 		limit = {
 			scope:employee = { has_trait = slave }
 		}
-		debug_log = "Speaker court position invalidated"
-		debug_log_date = yes
-		debug_log_scopes = yes
+		carnx_debug_log_effect = { MSG = carnx_debug_msg_speaker_invalidated }
 	}
 }
