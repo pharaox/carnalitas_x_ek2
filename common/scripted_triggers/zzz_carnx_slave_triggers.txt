@@ -1,0 +1,33 @@
+﻿carnx_can_serve_as_any_court_position_trigger = {
+	OR = {
+		carnx_vanilla_can_serve_as_any_court_position_trigger = { RULER = $RULER$ }
+		carnx_ek_can_serve_as_any_court_position_trigger = { RULER = $RULER$ }
+	}
+}
+
+carnx_is_slave_employment_enabled_trigger = {
+	OR = {
+		faith = { has_doctrine_parameter = carnx_slave_employment_active }
+		has_government = clan_government
+		has_government = tribal_government
+		has_government = autocracy_government
+		has_government = pirate_government
+	}
+}
+
+carnx_is_employed_slaves_more_loyal_enabled_trigger = {
+	OR = {
+		faith = { has_doctrine_parameter = carnx_employed_slaves_more_loyal_active }
+		has_government = clan_government
+		has_government = tribal_government
+		has_government = autocracy_government
+		has_government = pirate_government
+	}
+}
+
+carnx_is_slave_soldiers_enabled_trigger = {
+	OR = {
+		faith = { has_doctrine_parameter = carnx_slave_soldiers_active }
+		has_government = clan_government
+	}
+}

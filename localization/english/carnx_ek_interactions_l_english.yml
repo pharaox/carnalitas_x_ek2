@@ -1,0 +1,6 @@
+﻿l_english:
+ # Modifier reasons
+ carnx_lacking_court_mage_reason: "[recipient.GetShortUIName|U] is lacking a good $court_mage_position$: $VALUE|=+0$"
+ carnx_lacking_loremaster_reason: "[recipient.GetShortUIName|U] is lacking a good $loremaster_court_position$: $VALUE|=+0$"
+ carnx_lacking_shadowscale_reason: "[recipient.GetShortUIName|U] is lacking a good $shadowscale_court_position$: $VALUE|=+0$"
+ carnx_lacking_speaker_reason: "[recipient.GetShortUIName|U] is lacking a good $speaker_court_position$: $VALUE|=+0$"

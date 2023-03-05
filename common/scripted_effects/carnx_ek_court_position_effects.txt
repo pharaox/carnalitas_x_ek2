@@ -1,0 +1,148 @@
+﻿# COURT MAGE
+
+carnx_court_mage_title_accepted_effect = {
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Court Mage court position received"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_court_mage_title_revoked_effect = {
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Court Mage court position revoked"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_court_mage_title_invalidated_effect = {
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Court Mage court position invalidated"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+# LOREMASTER
+
+carnx_loremaster_title_accepted_effect = {
+	court_tutor_title_accepted_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Loremaster court position received"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_loremaster_title_revoked_effect = {
+	court_tutor_title_revoked_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Loremaster court position revoked"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_loremaster_title_invalidated_effect = {
+	court_tutor_title_invalidated_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Loremaster court position invalidated"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+# SHADOWSCALE
+
+carnx_shadowscale_title_accepted_effect = {
+	shadowscale_title_accepted_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Shadowscale court position received"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_shadowscale_title_revoked_effect = {
+	shadowscale_title_revoked_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Shadowscale court position revoked"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_shadowscale_title_invalidated_effect = {
+	shadowscale_title_invalidated_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Shadowscale court position invalidated"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+# SPEAKER
+
+carnx_speaker_title_accepted_effect = {
+	speaker_title_accepted_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Speaker court position received"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_speaker_title_revoked_effect = {
+	speaker_title_revoked_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Speaker court position revoked"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}
+
+carnx_speaker_title_invalidated_effect = {
+	speaker_title_invalidated_effect = yes
+	if = {
+		limit = {
+			scope:employee = { has_trait = slave }
+		}
+		debug_log = "Speaker court position invalidated"
+		debug_log_date = yes
+		debug_log_scopes = yes
+	}
+}

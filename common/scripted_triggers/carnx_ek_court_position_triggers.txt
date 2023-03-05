@@ -1,0 +1,21 @@
+﻿carnx_can_be_court_mage_trigger = {
+	exists = $LIEGE$
+	is_adult = yes
+	can_magic_trigger = yes
+	has_magic_perk_trigger = yes
+}
+
+carnx_can_be_loremaster_trigger = {
+	NOT = { is_spouse_of = $LIEGE$ }
+}
+
+carnx_can_be_shadowscale_trigger = {
+	exists = $LIEGE$
+	is_adult = yes
+	has_trait = shadowscale
+}
+
+carnx_can_be_speaker_trigger = {
+	exists = $LIEGE$
+	is_adult = yes
+}

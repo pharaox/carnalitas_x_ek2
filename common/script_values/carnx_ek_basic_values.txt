@@ -1,0 +1,5 @@
+﻿# Aptitude thresholds
+carnx_court_mage_aptitude_threshold = poor_effectiveness
+carnx_loremaster_aptitude_threshold = average_effectiveness
+carnx_shadowscale_aptitude_threshold = average_effectiveness
+carnx_speaker_aptitude_threshold = average_effectiveness

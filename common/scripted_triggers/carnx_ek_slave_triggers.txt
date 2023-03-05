@@ -1,0 +1,40 @@
+﻿carnx_can_serve_as_court_mage_trigger = {
+	carnx_can_serve_as_court_position_trigger = {
+		TYPE = court_mage_position
+		NAME = court_mage
+		LIEGE = $RULER$
+	}
+}
+
+carnx_can_serve_as_loremaster_trigger = {
+	carnx_can_serve_as_court_position_trigger = {
+		TYPE = loremaster_court_position
+		NAME = loremaster
+		LIEGE = $RULER$
+	}
+}
+
+carnx_can_serve_as_shadowscale_trigger = {
+	carnx_can_serve_as_court_position_trigger = {
+		TYPE = shadowscale_court_position
+		NAME = shadowscale
+		LIEGE = $RULER$
+	}
+}
+
+carnx_can_serve_as_speaker_trigger = {
+	carnx_can_serve_as_court_position_trigger = {
+		TYPE = speaker_court_position
+		NAME = speaker
+		LIEGE = $RULER$
+	}
+}
+
+carnx_ek_can_serve_as_any_court_position_trigger = {
+	OR = {
+		carnx_can_serve_as_court_mage_trigger = { RULER = $RULER$ }
+		carnx_can_serve_as_loremaster_trigger = { RULER = $RULER$ }
+		carnx_can_serve_as_shadowscale_trigger = { RULER = $RULER$ }
+		carnx_can_serve_as_speaker_trigger = { RULER = $RULER$ }
+	}
+}

@@ -1,0 +1,236 @@
+﻿carnx_court_position_court_mage_salary = {
+	value = court_position_physician_salary
+	if = {
+		limit = {
+			scope:liege = {
+				carnx_employs_slave_as_court_position_trigger = { TYPE = court_mage_position }
+			}
+		}
+		multiply = {
+			value = carnx_court_position_slave_salary_multiplier
+			desc = carnx_slave_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+}
+
+carnx_court_position_loremaster_salary = {
+	value = medium_court_position_salary
+	if = {
+		limit = {
+			scope:liege = {
+				carnx_employs_slave_as_court_position_trigger = { TYPE = loremaster_court_position }
+			}
+		}
+		multiply = {
+			value = carnx_court_position_slave_salary_multiplier
+			desc = carnx_slave_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+}
+
+carnx_court_position_shadowscale_salary = {
+	value = minor_court_position_salary
+	if = {
+		limit = {
+			scope:liege = {
+				carnx_employs_slave_as_court_position_trigger = { TYPE = shadowscale_court_position }
+			}
+		}
+		multiply = {
+			value = carnx_court_position_slave_salary_multiplier
+			desc = carnx_slave_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+}
+
+carnx_court_position_speaker_salary = {
+	value = medium_court_position_salary
+	if = {
+		limit = {
+			scope:liege = {
+				carnx_employs_slave_as_court_position_trigger = { TYPE = speaker_court_position }
+			}
+		}
+		multiply = {
+			value = carnx_court_position_slave_salary_multiplier
+			desc = carnx_slave_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+}
+
+carnx_court_mage_aptitude_difference_value = {
+	value = 0
+	if = {
+		limit = {
+			carnx_can_serve_as_court_mage_trigger = { RULER = scope:liege }
+		}
+		value = aptitude:court_mage_position
+		subtract = carnx_court_mage_aptitude_threshold
+	}
+}
+
+carnx_loremaster_aptitude_difference_value = {
+	value = 0
+	if = {
+		limit = {
+			carnx_can_serve_as_loremaster_trigger = { RULER = scope:liege }
+		}
+		value = aptitude:loremaster_court_position
+		subtract = carnx_loremaster_aptitude_threshold
+	}
+}
+
+carnx_shadowscale_aptitude_difference_value = {
+	value = 0
+	if = {
+		limit = {
+			carnx_can_serve_as_shadowscale_trigger = { RULER = scope:liege }
+		}
+		value = aptitude:shadowscale_court_position
+		subtract = carnx_shadowscale_aptitude_threshold
+	}
+}
+
+carnx_speaker_aptitude_difference_value = {
+	value = 0
+	if = {
+		limit = {
+			carnx_can_serve_as_speaker_trigger = { RULER = scope:liege }
+		}
+		value = aptitude:speaker_court_position
+		subtract = carnx_speaker_aptitude_threshold
+	}
+}
+
+carnx_ek_max_aptitude_difference_value = {
+	value = 0
+	min = {
+		value = carnx_court_mage_aptitude_difference_value
+		min = {
+			value = carnx_loremaster_aptitude_difference_value
+			min = {
+				value = carnx_shadowscale_aptitude_difference_value
+				min = {
+					value = carnx_speaker_aptitude_difference_value
+				}
+			}
+		}
+	}
+}
+
+carnx_ek_genetic_character_value = {
+	value = 0
+
+	# Arcana
+	if = {
+		limit = { has_trait = arcana_bad_1 }
+		add = -1
+	}
+	else_if = {
+		limit = { has_trait = arcana_bad_2 }
+		add = -2
+	}
+	if = {
+		limit = { has_trait = arcana_bad_3 }
+		add = -3
+	}
+	if = {
+		limit = { has_trait = arcana_good_1 }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = arcana_good_2 }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = arcana_good_3 }
+		add = 3
+	}
+}
+
+carnx_ek_court_position_traits_character_value = {
+	value = 0
+	if = { # 50
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_master_perk
+				has_perk = destruction_master_perk
+				has_perk = alteration_master_perk
+				has_perk = illusion_master_perk
+				has_perk = restoration_master_perk
+			}
+		}
+		add = 5
+	}
+	else_if = { # 40
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_expert_perk
+				has_perk = destruction_expert_perk
+				has_perk = alteration_expert_perk
+				has_perk = illusion_expert_perk
+				has_perk = restoration_expert_perk
+			}
+		}
+		add = 4
+	}
+	else_if = { # 30
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_journeyman_perk
+				has_perk = destruction_journeyman_perk
+				has_perk = alteration_journeyman_perk
+				has_perk = illusion_journeyman_perk
+				has_perk = restoration_journeyman_perk
+			}
+		}
+		add = 3
+	}
+	else_if = { # 20
+		limit = {
+			OR = {
+				# Court Mage
+				has_trait = mystic_3
+				has_perk = conjuration_apprentice_perk
+				has_perk = destruction_apprentice_perk
+				has_perk = alteration_apprentice_perk
+				has_perk = illusion_apprentice_perk
+				has_perk = restoration_apprentice_perk
+				# Shadowscale
+				has_trait = schemer
+				# Speaker
+				has_trait = diplomat
+				has_trait = august
+				has_trait = family_first
+			}
+		}
+		add = 2
+	}
+	else_if = { # 10
+		limit = {
+			OR = {
+				# Court Mage
+				has_trait = mystic_2
+				has_trait = scholar
+				has_perk = conjuration_novice_perk
+				has_perk = destruction_novice_perk
+				has_perk = alteration_novice_perk
+				has_perk = illusion_novice_perk
+				has_perk = restoration_novice_perk
+				# Loremaster
+				has_trait = shrewd
+				# Shadowscale
+				has_trait = torturer
+				has_trait = blademaster_2
+			}
+		}
+		add = 1
+	}
+}
