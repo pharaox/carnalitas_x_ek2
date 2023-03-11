@@ -111,7 +111,7 @@ carn_slavery_doctrine_seeding.0001 = {
 							if = {
 								# Hostile faith slavery is accepted in Aldmeri, Trinimac, Yoku religions
 								# "Altmer were still said to have humanoid slaves during the seventh century of the Second Era"
-								# See https://elderscrolls.fandom.com/wiki/Altmer
+								# See https://elderscrolls.fandom.com/wiki/Altmer#Society
 								# Tinimac is the Daedric Prince Malacath, so similar attitude to slavery
 								# See https://elderscrolls.fandom.com/wiki/Trinimac
 								# "Slavery was widespread in Yokuda, and continues today in some places in Hammerfell."
@@ -127,8 +127,8 @@ carn_slavery_doctrine_seeding.0001 = {
 							}
 							else_if = {
 								# Hostile faith slavery is crime in Nedic-Nordic and Marukhati religions
-								# These religions descend from the one founded by Alesia in which slavery was outlawed
-								# See https://elderscrolls.fandom.com/wiki/Altmer
+								# These religions descend from the one founded by Alessia in which slavery was outlawed
+								# See https://elderscrolls.fandom.com/wiki/Alessian_Empire#Alessia's_Reign
 								limit = {
 									OR = {
 										AND = {
@@ -151,11 +151,11 @@ carn_slavery_doctrine_seeding.0001 = {
 								# Hostile faith slavery is accepted in Hist, Khajiiti, Dwemeri, Necromantic religions
 								# "However, under the effects of the Mad Hist, the Xit-Xaht tribe enslaved many of their own species to rebuild the Ruins of Mazzatun"
 								# "Argonian mothers would sometimes sell their own children into slavery"
-								# See https://elderscrolls.fandom.com/wiki/Slavery
+								# See https://elderscrolls.fandom.com/wiki/Slavery#Black_Marsh
 								# "Khajits, have it since ancient times and still have, sell their own kind to other races"
 								# See https://www.reddit.com/r/teslore/comments/j58xuf/what_other_races_practiced_slavery/
 								# "Those who agreed became the savage Falmer, soon becoming slaves to the Dwemer."
-								# See https://elderscrolls.fandom.com/wiki/Slavery
+								# See https://elderscrolls.fandom.com/wiki/Slavery#Skyrim
 								# Worship of Molag Bal is accepted in Necromantic religions
 								limit = {
 									OR = {
