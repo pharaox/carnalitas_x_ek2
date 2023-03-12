@@ -1,0 +1,21 @@
+﻿ek_human_age_equivalent = {
+	if = {
+		limit = { age > 18 }
+		value = 18
+		add = {
+			value = age
+			subtract = 18
+			divide = {
+				value = ek_life_expectancy
+				subtract = 18
+			}
+			multiply = {
+				value = 100
+				subtract = 18
+			}
+		}
+	}
+	else = {
+		value = age
+	}
+}

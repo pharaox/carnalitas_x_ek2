@@ -1,0 +1,3 @@
+﻿carnx_age_value = {
+	value = ek_human_age_equivalent
+}
