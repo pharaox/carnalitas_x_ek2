@@ -5,7 +5,7 @@ This is a [Carnalitas Slavery Reimagined](https://www.loverslab.com/topic/204734
 Note that since Carnalitas itself has issues with both CK3 1.8.* and EK2, it is strongly recommended to use the following additional compatibility patches:
 
 * [GUK Fix Carnalitas](https://www.loverslab.com/files/file/24787-guk_fix_carnzip/)
-* [Carnalitas EK2 Compatibility]()
+* [Carnalitas EK2 Compatibility](https://www.loverslab.com/topic/207029-mod-carnalitas-ek2-compatibility/)
 
 Load order:
 
