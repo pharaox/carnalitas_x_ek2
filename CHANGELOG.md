@@ -1,3 +1,11 @@
+# Version 0.6.0
+
+* Adapted to changes in CSR 0.6.0
+
+## Bug Fixes
+
+* Fixed actual age instead of "EK human age equivalent" being (sometimes) used in marriage interactions (EK2 bug).
+
 # Version 0.5.0
 
 * Adapted to changes in CSR 0.5.0
