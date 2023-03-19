@@ -1,0 +1,120 @@
+﻿carnx_ek_child_birth_dynasty_effect = {
+	### EK EDIT: Added the effect of the Hegemon legacy line
+	if = {
+		limit = {
+			exists = scope:dynasty
+			scope:dynasty = { has_dynasty_perk = hegemon_legacy_5 }
+		}
+		scope:dynasty.dynast = {
+			if = {
+				limit = {
+					has_hook_of_type = {
+						type = house_head_hook
+						target = scope:child
+					}
+				}
+				remove_hook = {
+					type = house_head_hook
+					target = scope:child
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = hegemon_legacy_5 }
+		}
+		dynasty.dynast = {
+			if = {
+				limit = {
+					is_alive = yes
+					NOT = { this = scope:child } # If the dynasty dies out, a posthumous child can revive it
+				}
+				add_hook_no_toast = {
+					type = house_head_hook
+					target = scope:child
+				}
+			}
+		}
+	}
+
+	### EK EDIT: Arcane Blood effect
+	if = {
+		limit = {
+			exists = dynasty
+			dynasty = { has_dynasty_perk = magicka_legacy_1 }
+			OR = { # The child must have a real parent of the Dynasty...
+				scope:mother.dynasty = dynasty
+				scope:real_father.dynasty = dynasty
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_trait = arcana_good
+					has_trait = arcana_bad
+				}
+			}
+			# Higher chance for the player so that they notice it more easily
+			random = {
+				chance = 30
+				modifier = {
+					add = 20
+					any_parent = { is_ai = no }
+				}
+
+				random_list = {
+					60 = { add_trait = arcana_good_1 } 	# 18% / 30%
+					30 = { add_trait = arcana_good_2 } 	# 9%  / 15%
+					10 = { add_trait = arcana_good_3 } 	# 3%  / 5%
+					# Nothing							# 70% / 50%
+				}
+			}
+		}
+	}
+}
+
+carnx_ek_child_birth_culture_effect = {
+	### EK EDIT: Cultural traditions giving more magic babies
+	if = {
+		limit = { #if they have the correct culture
+			exists = culture
+			culture = { has_cultural_parameter = arcane_affinity_birth }
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_trait = arcana_good
+					has_trait = arcana_bad
+				}
+			}
+			# Higher chance for the player so that they notice it more easily
+			random = {
+				chance = 30
+				modifier = {
+					add = 20
+					any_parent = { is_ai = no }
+				}
+
+				random_list = {
+					60 = { add_trait = arcana_good_1 } 	# 18% / 30%
+					30 = { add_trait = arcana_good_2 } 	# 9%  / 15%
+					10 = { add_trait = arcana_good_3 } 	# 3%  / 5%
+					# Nothing							# 70% / 50%
+				}
+			}
+		}
+	}
+}
+
+carnx_child_birth_dynasty_effect = {
+	carnx_vanilla_child_birth_dynasty_effect = yes
+	carnx_ek_child_birth_dynasty_effect = yes
+}
+
+carnx_child_birth_culture_effect = {
+	carnx_vanilla_child_birth_culture_effect = yes
+	carnx_ek_child_birth_culture_effect = yes
+}
+
