@@ -29,4 +29,4 @@
 
 ## Version 0.4.0
 
-* Initial version for CSR 0.4.0
+* Initial version for CSR 0.4.0 and EK2 0.11.2a
