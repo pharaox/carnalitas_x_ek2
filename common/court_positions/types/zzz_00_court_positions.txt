@@ -45,7 +45,6 @@ court_mage_position = { #EK EDIT
 		scope:employee = {
 			is_imprisoned = no
 			is_adult = yes
-			can_magic_trigger = yes
 			has_magic_perk_trigger = yes
 		}
 	}
@@ -62,16 +61,25 @@ court_mage_position = { #EK EDIT
 		value = 1
 		add = {
 			value = arcana
-			multiply = 1.75
+			multiply = 1.5
 			max = 50
 			desc = court_position_skill_arcana
+		}
+		if = {
+			limit = {
+				has_trait = necromancer
+			}
+			add = {
+				value = 15
+				desc = court_position_necomancer_trait
+			}
 		}
 		if = {
 			limit = {
 				has_trait = education_magical_ability_4
 			}
 			add = {
-				value = 40
+				value = 20
 				desc = court_position_education_magical_ability_4_trait
 			}
 		}
@@ -80,7 +88,7 @@ court_mage_position = { #EK EDIT
 				has_trait = education_magical_ability_3
 			}
 			add = {
-				value = 30
+				value = 15
 				desc = court_position_education_magical_ability_3_trait
 			}
 		}
@@ -89,7 +97,7 @@ court_mage_position = { #EK EDIT
 				has_trait = education_magical_ability_2
 			}
 			add = {
-				value = 20
+				value = 10
 				desc = court_position_education_magical_ability_2_trait
 			}
 		}
@@ -98,226 +106,8 @@ court_mage_position = { #EK EDIT
 				has_trait = education_magical_ability_1
 			}
 			add = {
-				value = 10
-				desc = court_position_education_magical_ability_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = mystic_3
-			}
-			add = {
-				value = 20
-				desc = court_position_mystic_3_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = mystic_2
-			}
-			add = {
-				value = 10
-				desc = court_position_mystic_2_trait
-			}
-		}
-		else_if = {
-			limit = {
-				has_trait = mystic_1
-			}
-			add = {
 				value = 5
-				desc = court_position_mystic_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = scholar
-			}
-			add = {
-				value = 10
-				desc = court_position_scholar_trait
-			}
-		}
-
-		# Unused
-		#if = {
-		#	limit = {
-		#		has_trait = conjurer
-		#	}
-		#	add = {
-		#		value = 50
-		#		desc = court_position_conjurer_trait
-		#	}
-		#}
-		#if = {
-		#	limit = {
-		#		has_trait = soul_magic
-		#	}
-		#	add = {
-		#		value = 50
-		#		desc = court_position_soul_magic_trait
-		#	}
-		#}
-		if = {
-			limit = {
-				has_trait = lazy
-			}
-			add = {
-				value = -10
-				desc = court_position_lazy_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = diligent
-			}
-			add = {
-				value = 10
-				desc = court_position_diligent_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = patient
-			}
-			add = {
-				value = 10
-				desc = court_position_patient_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = impatient
-			}
-			add = {
-				value = -10
-				desc = court_position_impatient_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = shy
-			}
-			add = {
-				value = 10
-				desc = court_position_shy_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = ambitious
-			}
-			add = {
-				value = 10
-				desc = court_position_ambitious_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = drunkard
-			}
-			add = {
-				value = -10
-				desc = court_position_drunkard_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = hashishiyah
-			}
-			add = {
-				value = -10
-				desc = court_position_hashishiyah_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = reclusive
-			}
-			add = {
-				value = 10
-				desc = court_position_reclusive_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = irritable
-			}
-			add = {
-				value = -10
-				desc = court_position_irritable_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = journaller
-			}
-			add = {
-				value = 10
-				desc = court_position_journaller_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_bad_1
-			}
-			add = {
-				value = -10
-				desc = court_position_intellect_bad_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_bad_2
-			}
-			add = {
-				value = -20
-				desc = court_position_intellect_bad_2_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_bad_3
-			}
-			add = {
-				value = -30
-				desc = court_position_intellect_bad_3_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_good_1
-			}
-			add = {
-				value = 10
-				desc = court_position_intellect_good_1_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_good_2
-			}
-			add = {
-				value = 20
-				desc = court_position_intellect_good_2_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = intellect_good_3
-			}
-			add = {
-				value = 30
-				desc = court_position_intellect_good_3_trait
-			}
-		}
-		if = {
-			limit = {
-				has_trait = inbred
-			}
-			add = {
-				value = -10
-				desc = court_position_inbred_trait
+				desc = court_position_education_magical_ability_1_trait
 			}
 		}
 		if = {
@@ -325,7 +115,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_bad_1
 			}
 			add = {
-				value = -10
+				value = -5
 				desc = court_position_arcana_bad_1_trait
 			}
 		}
@@ -334,7 +124,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_bad_2
 			}
 			add = {
-				value = -20
+				value = -10
 				desc = court_position_arcana_bad_2_trait
 			}
 		}
@@ -343,7 +133,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_bad_3
 			}
 			add = {
-				value = -30
+				value = -15
 				desc = court_position_arcana_bad_3_trait
 			}
 		}
@@ -352,7 +142,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_good_1
 			}
 			add = {
-				value = 10
+				value = 5
 				desc = court_position_arcana_good_1_trait
 			}
 		}
@@ -361,7 +151,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_good_2
 			}
 			add = {
-				value = 20
+				value = 10
 				desc = court_position_arcana_good_2_trait
 			}
 		}
@@ -370,7 +160,7 @@ court_mage_position = { #EK EDIT
 				has_trait = arcana_good_3
 			}
 			add = {
-				value = 30
+				value = 15
 				desc = court_position_arcana_good_3_trait
 			}
 		}
@@ -379,7 +169,7 @@ court_mage_position = { #EK EDIT
 				has_perk = conjuration_novice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_conjuration_novice_perk
 			}
 		}
@@ -388,7 +178,7 @@ court_mage_position = { #EK EDIT
 				has_perk = conjuration_apprentice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_conjuration_apprentice_perk
 			}
 		}
@@ -397,7 +187,7 @@ court_mage_position = { #EK EDIT
 				has_perk = conjuration_journeyman_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_conjuration_journeyman_perk
 			}
 		}
@@ -406,7 +196,7 @@ court_mage_position = { #EK EDIT
 				has_perk = conjuration_expert_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_conjuration_expert_perk
 			}
 		}
@@ -415,7 +205,7 @@ court_mage_position = { #EK EDIT
 				has_perk = conjuration_master_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_conjuration_master_perk
 			}
 		}
@@ -424,7 +214,7 @@ court_mage_position = { #EK EDIT
 				has_perk = destruction_novice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_destruction_novice_perk
 			}
 		}
@@ -433,7 +223,7 @@ court_mage_position = { #EK EDIT
 				has_perk = destruction_apprentice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_destruction_apprentice_perk
 			}
 		}
@@ -442,7 +232,7 @@ court_mage_position = { #EK EDIT
 				has_perk = destruction_journeyman_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_destruction_journeyman_perk
 			}
 		}
@@ -451,7 +241,7 @@ court_mage_position = { #EK EDIT
 				has_perk = destruction_expert_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_destruction_expert_perk
 			}
 		}
@@ -460,7 +250,7 @@ court_mage_position = { #EK EDIT
 				has_perk = destruction_master_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_destruction_master_perk
 			}
 		}
@@ -469,7 +259,7 @@ court_mage_position = { #EK EDIT
 				has_perk = alteration_novice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_alteration_novice_perk
 			}
 		}
@@ -478,7 +268,7 @@ court_mage_position = { #EK EDIT
 				has_perk = alteration_apprentice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_alteration_apprentice_perk
 			}
 		}
@@ -487,7 +277,7 @@ court_mage_position = { #EK EDIT
 				has_perk = alteration_journeyman_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_alteration_journeyman_perk
 			}
 		}
@@ -496,7 +286,7 @@ court_mage_position = { #EK EDIT
 				has_perk = alteration_expert_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_alteration_expert_perk
 			}
 		}
@@ -505,7 +295,7 @@ court_mage_position = { #EK EDIT
 				has_perk = alteration_master_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_alteration_master_perk
 			}
 		}
@@ -514,7 +304,7 @@ court_mage_position = { #EK EDIT
 				has_perk = illusion_novice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_illusion_novice_perk
 			}
 		}
@@ -523,7 +313,7 @@ court_mage_position = { #EK EDIT
 				has_perk = illusion_apprentice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_illusion_apprentice_perk
 			}
 		}
@@ -532,7 +322,7 @@ court_mage_position = { #EK EDIT
 				has_perk = illusion_journeyman_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_illusion_journeyman_perk
 			}
 		}
@@ -541,7 +331,7 @@ court_mage_position = { #EK EDIT
 				has_perk = illusion_expert_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_illusion_expert_perk
 			}
 		}
@@ -550,7 +340,7 @@ court_mage_position = { #EK EDIT
 				has_perk = illusion_master_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_illusion_master_perk
 			}
 		}
@@ -559,7 +349,7 @@ court_mage_position = { #EK EDIT
 				has_perk = restoration_novice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_restoration_novice_perk
 			}
 		}
@@ -568,7 +358,7 @@ court_mage_position = { #EK EDIT
 				has_perk = restoration_apprentice_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_restoration_apprentice_perk
 			}
 		}
@@ -577,7 +367,7 @@ court_mage_position = { #EK EDIT
 				has_perk = restoration_journeyman_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_restoration_journeyman_perk
 			}
 		}
@@ -586,7 +376,7 @@ court_mage_position = { #EK EDIT
 				has_perk = restoration_expert_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_restoration_expert_perk
 			}
 		}
@@ -595,8 +385,53 @@ court_mage_position = { #EK EDIT
 				has_perk = restoration_master_perk
 			}
 			add = {
-				value = 10
+				value = 2
 				desc = court_position_restoration_master_perk
+			}
+		}
+		if = {
+			limit = {
+				has_perk = necromancy_novice_perk
+			}
+			add = {
+				value = 2
+				desc = court_position_necromancy_novice_perk
+			}
+		}
+		if = {
+			limit = {
+				has_perk = necromancy_apprentice_perk
+			}
+			add = {
+				value = 2
+				desc = court_position_necromancy_apprentice_perk
+			}
+		}
+		if = {
+			limit = {
+				has_perk = necromancy_journeyman_perk
+			}
+			add = {
+				value = 2
+				desc = court_position_necromancy_journeyman_perk
+			}
+		}
+		if = {
+			limit = {
+				has_perk = necromancy_expert_perk
+			}
+			add = {
+				value = 2
+				desc = court_position_necromancy_expert_perk
+			}
+		}
+		if = {
+			limit = {
+				has_perk = necromancy_master_perk
+			}
+			add = {
+				value = 2
+				desc = court_position_necromancy_master_perk
 			}
 		}
 		add = court_position_aptitude_family_business_value
@@ -691,6 +526,7 @@ court_mage_position = { #EK EDIT
 	modifier = {
 		monthly_prestige = minor_court_position_prestige_salary
 		learning = 1
+		#arcana = 2 #fake skill, effect applied in ek_magic_values.txt
 	}
 
 	on_court_position_received = {
@@ -905,6 +741,7 @@ court_physician_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -2181,6 +2018,7 @@ shadowscale_court_position = { #EK EDIT #Intrigue focused court position for His
 		culture = { has_cultural_pillar = heritage_argonian }
 		OR = {
 			faith = {has_doctrine = doctrine_pantheon_hist}
+			faith = {has_doctrine = doctrine_pantheon_amber_hist}
 			faith = {has_doctrine = doctrine_pantheon_sithis}
 		}
 	}
@@ -3145,6 +2983,7 @@ court_gardener_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -3311,6 +3150,7 @@ lady_in_waiting_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -3521,6 +3361,15 @@ antiquarian_court_position = {
 				desc = court_position_architect_study_experience
 			}
 		}
+		if = { #Cultural Tradition that improves the aptitude of characters of that culture #EK EDIT, new parameter
+			limit = {
+				culture = { has_cultural_parameter = characters_are_better_court_antiquarians }
+			}
+			add = {
+				value = 20
+				desc = court_position_tradition_antiquarian
+			}
+		}
 		add = court_position_aptitude_family_business_value
 		add = court_position_aptitude_low_penalty_value
 	}
@@ -3532,6 +3381,7 @@ antiquarian_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -3800,6 +3650,7 @@ court_tutor_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -4020,6 +3871,7 @@ food_taster_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -4189,6 +4041,7 @@ master_of_horse_court_position = {
 			OR = {
 				is_vassal_of = scope:liege
 				is_courtier_of = scope:liege
+				is_mindless_character = no
 			}
 			NOT = { carnx_is_slave_trigger = yes }
 		}
@@ -4388,6 +4241,7 @@ master_of_hunt_court_position = {
 			OR = {
 				is_vassal_of = scope:liege
 				is_courtier_of = scope:liege
+				is_mindless_character = no
 			}
 			NOT = { carnx_is_slave_trigger = yes }
 		}
@@ -4544,6 +4398,15 @@ royal_architect_court_position = {
 				desc = court_position_blind_trait
 			}
 		}
+		if = { #Cultural Tradition that improves the aptitude of characters of that culture #EK EDIT, new parameter
+			limit = {
+				culture = { has_cultural_parameter = characters_are_better_court_architects }
+			}
+			add = {
+				value = 20
+				desc = court_position_tradition_architect
+			}
+		}
 		add = court_position_aptitude_family_business_value
 		add = court_position_aptitude_low_penalty_value
 	}
@@ -4567,6 +4430,7 @@ royal_architect_court_position = {
 			OR = {
 				is_vassal_of = scope:liege
 				is_courtier_of = scope:liege
+				is_mindless_character = no
 			}
 			NOT = { carnx_is_slave_trigger = yes }
 		}
@@ -4772,6 +4636,7 @@ high_almoner_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 			NOT = { carnx_is_slave_trigger = yes }
 		}
 	}
@@ -4934,6 +4799,7 @@ seneschal_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -5127,6 +4993,7 @@ cupbearer_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -5319,6 +5186,7 @@ chief_eunuch_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -5543,6 +5411,7 @@ court_jester_court_position = {
 				is_vassal_of = scope:liege
 				is_courtier_of = scope:liege
 			}
+			is_mindless_character = no
 			trigger_if = {
 				limit = { NOT = { has_court_position = court_jester_court_position } }
 				court_position_does_not_already_have_a_job_trigger = yes # This positions is considered a job, and cannot be held at the same tims as another similar position
@@ -5756,6 +5625,7 @@ court_poet_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -5982,6 +5852,7 @@ court_musician_court_position = {
 		scope:employee = {
 			is_courtier_of = scope:liege
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 
@@ -6880,6 +6751,7 @@ court_artificer_court_position = {
 				}
 			}
 			is_imprisoned = no
+			is_mindless_character = no
 		}
 	}
 

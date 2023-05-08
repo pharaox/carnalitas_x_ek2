@@ -1570,22 +1570,22 @@ marriage_ai_accept_modifier = { ###MARRIAGE SCRIPTED MODIFIERS###
 		desc = MARRY_CONSANGUINITY_REASON
 	}
 
-	modifier = {
-		trigger = {
-			scope:secondary_recipient = {
-				ek_human_age_equivalent > 20
-				OR = {
-					dynasty = scope:recipient.dynasty
-					is_close_or_extended_family_of = scope:recipient
-				}
-			}
-		}
-		add = {
-			value = scope:secondary_recipient.ek_human_age_equivalent
-			subtract = 20
-		}
-		desc = MARRIAGE_DESPERATION
-	}
+	# modifier = { #EK EDIT: cut this as it didn't play nice with long lived characters
+	# 	trigger = {
+	# 		scope:secondary_recipient = {
+	# 			age > 20
+	# 			OR = {
+	# 				dynasty = scope:recipient.dynasty
+	# 				is_close_or_extended_family_of = scope:recipient
+	# 			}
+	# 		}
+	# 	}
+	# 	add = {
+	# 		value = scope:secondary_recipient.age
+	# 		subtract = 20
+	# 	}
+	# 	desc = MARRIAGE_DESPERATION
+	# }
 
 	modifier = { #The actor's spouse has boosted the AI's willingness to marry the heir
 		add = 75
@@ -1835,6 +1835,38 @@ marriage_ai_accept_modifier = { ###MARRIAGE SCRIPTED MODIFIERS###
 			}
 		}
 		desc = MARRIAGE_NO_OFFSPRING_REASON
+	}
+
+	# Cultures with the Pariah Folk innovation get reduced marriage acceptance with other cultures, for being "monsters"
+	modifier = {
+		add = -150
+		AND = {
+			scope:secondary_actor.culture = { has_innovation = innovation_pariah_folk }
+			scope:secondary_recipient.culture = {
+				NOR = {
+					has_innovation = innovation_pariah_folk
+					has_innovation = innovation_pariah_legacy
+				}
+			}
+		}
+		desc = MARRIAGE_MONSTER_REASON
+	}
+	# Former Pariahs however also face some skepticism here - just last week we didn't consider you people, and now you want to marry with us?
+	modifier = {
+		add = -50
+		AND = {
+			OR = {
+				scope:secondary_actor.culture = { has_innovation = innovation_pariah_legacy }
+				scope:secondary_actor.culture = { has_innovation = innovation_redeemed_pariahs }
+			}
+			scope:secondary_recipient.culture = {
+				NOR = {
+					has_innovation = innovation_pariah_folk
+					has_innovation = innovation_pariah_legacy
+				}
+			}
+		}
+		desc = MARRIAGE_FORMER_PARIAH_REASON
 	}
 
 	###########################

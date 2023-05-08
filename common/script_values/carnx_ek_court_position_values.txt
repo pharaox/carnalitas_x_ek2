@@ -1,5 +1,5 @@
 ﻿carnx_court_position_court_mage_salary = {
-	value = court_position_physician_salary
+	value = medium_court_position_salary
 	if = {
 		limit = {
 			scope:liege = {
@@ -154,55 +154,9 @@ carnx_ek_genetic_character_value = {
 
 carnx_ek_court_position_traits_character_value = {
 	value = 0
-	if = { # 50
+	if = { # 20
 		limit = {
 			OR = {
-				# Court Mage
-				has_perk = conjuration_master_perk
-				has_perk = destruction_master_perk
-				has_perk = alteration_master_perk
-				has_perk = illusion_master_perk
-				has_perk = restoration_master_perk
-			}
-		}
-		add = 5
-	}
-	else_if = { # 40
-		limit = {
-			OR = {
-				# Court Mage
-				has_perk = conjuration_expert_perk
-				has_perk = destruction_expert_perk
-				has_perk = alteration_expert_perk
-				has_perk = illusion_expert_perk
-				has_perk = restoration_expert_perk
-			}
-		}
-		add = 4
-	}
-	else_if = { # 30
-		limit = {
-			OR = {
-				# Court Mage
-				has_perk = conjuration_journeyman_perk
-				has_perk = destruction_journeyman_perk
-				has_perk = alteration_journeyman_perk
-				has_perk = illusion_journeyman_perk
-				has_perk = restoration_journeyman_perk
-			}
-		}
-		add = 3
-	}
-	else_if = { # 20
-		limit = {
-			OR = {
-				# Court Mage
-				has_trait = mystic_3
-				has_perk = conjuration_apprentice_perk
-				has_perk = destruction_apprentice_perk
-				has_perk = alteration_apprentice_perk
-				has_perk = illusion_apprentice_perk
-				has_perk = restoration_apprentice_perk
 				# Shadowscale
 				has_trait = schemer
 				# Speaker
@@ -213,17 +167,25 @@ carnx_ek_court_position_traits_character_value = {
 		}
 		add = 2
 	}
+	else_if = { # 15
+		limit = {
+			OR = {
+				# Court Mage
+				has_trait = necromancer
+			}
+		}
+		add = 1.5
+	}
 	else_if = { # 10
 		limit = {
 			OR = {
 				# Court Mage
-				has_trait = mystic_2
-				has_trait = scholar
-				has_perk = conjuration_novice_perk
-				has_perk = destruction_novice_perk
-				has_perk = alteration_novice_perk
-				has_perk = illusion_novice_perk
-				has_perk = restoration_novice_perk
+				has_perk = conjuration_master_perk
+				has_perk = destruction_master_perk
+				has_perk = alteration_master_perk
+				has_perk = illusion_master_perk
+				has_perk = restoration_master_perk
+				has_perk = necromancy_master_perk
 				# Loremaster
 				has_trait = shrewd
 				# Shadowscale
@@ -232,5 +194,61 @@ carnx_ek_court_position_traits_character_value = {
 			}
 		}
 		add = 1
+	}
+	else_if = { # 8
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_expert_perk
+				has_perk = destruction_expert_perk
+				has_perk = alteration_expert_perk
+				has_perk = illusion_expert_perk
+				has_perk = restoration_expert_perk
+				has_perk = necromancy_expert_perk
+			}
+		}
+		add = 0.8
+	}
+	else_if = { # 6
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_journeyman_perk
+				has_perk = destruction_journeyman_perk
+				has_perk = alteration_journeyman_perk
+				has_perk = illusion_journeyman_perk
+				has_perk = restoration_journeyman_perk
+				has_perk = necromancy_journeyman_perk
+			}
+		}
+		add = 0.6
+	}
+	else_if = { # 4
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_apprentice_perk
+				has_perk = destruction_apprentice_perk
+				has_perk = alteration_apprentice_perk
+				has_perk = illusion_apprentice_perk
+				has_perk = restoration_apprentice_perk
+				has_perk = necromancy_apprentice_perk
+			}
+		}
+		add = 0.4
+	}
+	else_if = { # 2
+		limit = {
+			OR = {
+				# Court Mage
+				has_perk = conjuration_novice_perk
+				has_perk = destruction_novice_perk
+				has_perk = alteration_novice_perk
+				has_perk = illusion_novice_perk
+				has_perk = restoration_novice_perk
+				has_perk = necromancy_novice_perk
+			}
+		}
+		add = 0.2
 	}
 }

@@ -1,7 +1,6 @@
 ﻿carnx_can_be_court_mage_trigger = {
 	exists = $LIEGE$
 	is_adult = yes
-	can_magic_trigger = yes
 	has_magic_perk_trigger = yes
 }
 

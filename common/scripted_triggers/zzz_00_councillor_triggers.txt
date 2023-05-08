@@ -1,0 +1,19 @@
+﻿# Ek Edit: A lunatic liege can appoint incapbale characters (undeads, etc) as councillors
+# Overridden from EK2.
+can_be_councillor_basics_trigger = {
+	OR = {
+		is_capable_adult = yes
+		AND = {
+			is_capable_adult = no
+			# CSR: Check if liege exists to avoid errors
+			exists = liege
+			liege = { has_trait = lunatic_1 }
+		}
+	}
+	is_imprisoned = no
+	is_at_war_with_liege = no
+	trigger_if = {
+		limit = { has_variable = block_hire_councillor }
+		NOT = { var:block_hire_councillor = liege }
+	}
+}
