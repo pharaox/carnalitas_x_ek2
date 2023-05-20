@@ -1570,22 +1570,22 @@ marriage_ai_accept_modifier = { ###MARRIAGE SCRIPTED MODIFIERS###
 		desc = MARRY_CONSANGUINITY_REASON
 	}
 
-	# modifier = { #EK EDIT: cut this as it didn't play nice with long lived characters
-	# 	trigger = {
-	# 		scope:secondary_recipient = {
-	# 			age > 20
-	# 			OR = {
-	# 				dynasty = scope:recipient.dynasty
-	# 				is_close_or_extended_family_of = scope:recipient
-	# 			}
-	# 		}
-	# 	}
-	# 	add = {
-	# 		value = scope:secondary_recipient.age
-	# 		subtract = 20
-	# 	}
-	# 	desc = MARRIAGE_DESPERATION
-	# }
+	modifier = { #EK EDIT: cut this as it didn't play nice with long lived characters
+ 		trigger = {
+	 		scope:secondary_recipient = {
+	 			ek_human_age_equivalent > 20
+	 			OR = {
+	 				dynasty = scope:recipient.dynasty
+	 				is_close_or_extended_family_of = scope:recipient
+	 			}
+	 		}
+	 	}
+	 	add = {
+	 		value = scope:secondary_recipient.ek_human_age_equivalent
+	 		subtract = 20
+	 	}
+	 	desc = MARRIAGE_DESPERATION
+	}
 
 	modifier = { #The actor's spouse has boosted the AI's willingness to marry the heir
 		add = 75
