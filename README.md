@@ -2,7 +2,9 @@
 
 This is a [Carnalitas Slavery Reimagined](https://www.loverslab.com/topic/204734-mod-carnalitas-slavery-reimagined/) compatibility patch for [Elder Kings 2](https://steamcommunity.com/sharedfiles/filedetails/?id=2887120253). For an overview of features and other changes, see the README of the main mod.
 
-Note that since Carnalitas itself has issues with both CK3 1.8.* and EK2, it is strongly recommended to use the following additional compatibility patches:
+The latest version is compatible with CK3 1.8.x, Carnalitas 1.7, CSR 0.9.x, and EK2 0.12.
+
+Note that since Carnalitas itself has issues with both CK3 1.8.x and EK2, it is strongly recommended to use the following additional compatibility patches:
 
 * [GUK Fix Carnalitas](https://www.loverslab.com/files/file/24787-guk_fix_carnzip/)
 * [Carnalitas EK2 Compatibility](https://www.loverslab.com/topic/207029-mod-carnalitas-ek2-compatibility/)

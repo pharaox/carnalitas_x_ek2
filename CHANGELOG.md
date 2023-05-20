@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.8.1
+
+* Minor updates to marriage interactions and README.md.
+
 ## Version 0.8.0
 
 * Adapted to changes in CSR 0.8.0
