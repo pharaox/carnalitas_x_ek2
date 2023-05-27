@@ -29,12 +29,3 @@ carnx_can_serve_as_speaker_trigger = {
 		LIEGE = $RULER$
 	}
 }
-
-carnx_ek_can_serve_as_any_court_position_trigger = {
-	OR = {
-		carnx_can_serve_as_court_mage_trigger = { RULER = $RULER$ }
-		carnx_can_serve_as_loremaster_trigger = { RULER = $RULER$ }
-		carnx_can_serve_as_shadowscale_trigger = { RULER = $RULER$ }
-		carnx_can_serve_as_speaker_trigger = { RULER = $RULER$ }
-	}
-}
