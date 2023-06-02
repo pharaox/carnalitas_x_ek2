@@ -1,10 +1,11 @@
-﻿# Ek Edit: A lunatic liege can appoint incapbale characters (undeads, etc) as councillors
+﻿# Ek Edit: A lunatic liege can appoint mindless undead as councillors, though they're gonna suck at their job
 # Overridden from EK2.
 can_be_councillor_basics_trigger = {
 	OR = {
 		is_capable_adult = yes
 		AND = {
-			is_capable_adult = no
+			is_adult = yes
+			is_mindless_character = yes #applied to summoned undead
 			# CSR: Check if liege exists to avoid errors
 			exists = liege
 			liege = { has_trait = lunatic_1 }

@@ -1,6 +1,5 @@
-﻿### EK EDIT: Removed references to vanilla titles. Court Physician gains aptitude for Restoration perks
+﻿### EK EDIT: Removed references to vanilla titles. Added flags for mindless and summoned characters, Court Physician gains aptitude for Restoration perks
 ### EK EDIT: added our own court positions to this file. This to allow us to order them as we want in the court position GUI
-
 
 # Have a look at _court_positions.info for documentation
 
