@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.8.3
+
+* Adapted to changes in EK2 0.12.1
+
 ## Version 0.8.2
 
 * Adapted to changes in CSR 0.9.2
