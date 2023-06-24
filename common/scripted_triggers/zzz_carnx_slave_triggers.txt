@@ -5,6 +5,8 @@
 		has_government = tribal_government
 		has_government = autocracy_government
 		has_government = pirate_government
+		has_government = praxis_government
+		has_character_modifier = carnx_slavery_attitude_employer_modifier
 	}
 }
 
@@ -15,6 +17,8 @@ carnx_is_employed_slaves_more_loyal_enabled_trigger = {
 		has_government = tribal_government
 		has_government = autocracy_government
 		has_government = pirate_government
+		has_government = praxis_government
+		has_character_modifier = carnx_slavery_attitude_employer_modifier
 	}
 }
 
@@ -22,5 +26,73 @@ carnx_is_slave_soldiers_enabled_trigger = {
 	OR = {
 		faith = { has_doctrine_parameter = carnx_slave_soldiers_active }
 		has_government = clan_government
+		has_character_modifier = carnx_slavery_attitude_employer_modifier
+	}
+}
+
+carnx_slavery_attitude_slaver_government_trigger = {
+	has_government = tribal_government
+	has_government = pirate_government
+}
+
+carnx_slavery_attitude_liberator_government_trigger = {
+	has_government = theocracy_government
+}
+
+carnx_slavery_attitude_trader_government_trigger = {
+	has_government = republic_government
+}
+
+carnx_slavery_attitude_employer_government_trigger = {
+	has_government = clan_government
+	has_government = autocracy_government
+	has_government = praxis_government
+}
+
+carnx_slavery_attitude_slaver_faith_culture_trigger = {
+	faith = {
+		OR = {
+			AND = {
+				religion = { is_in_family = rf_daedra }
+				NOR = {
+					religion = religion:velothi_faiths
+					religion = religion:meridia_religion
+					this = faith:hidden_moon
+				}
+			}
+			religion = religion:necromantic_religion
+			religion = religion:hist_religion
+		}
+	}
+}
+
+carnx_slavery_attitude_liberator_faith_culture_trigger = {
+	faith = {
+		OR = {
+			religion = religion:nedic_nordic_religion
+			religion = religion:marukhati_religion
+		}
+	}
+}
+
+carnx_slavery_attitude_trader_faith_culture_trigger = {
+	faith = {
+		OR = {
+			religion = religion:yokudan_religion
+			religion = religion:khajiiti_religion
+		}
+	}
+}
+
+carnx_slavery_attitude_employer_faith_culture_trigger = {
+	faith = {
+		OR = {
+			has_doctrine_parameter = carnx_slave_employment_active
+			religion = religion:aldmeri_religion
+			religion = religion:trinimac_religion
+			religion = religion:yokudan_religion
+			religion = religion:khajiiti_religion
+			religion = religion:dwemer_religion
+		}
 	}
 }

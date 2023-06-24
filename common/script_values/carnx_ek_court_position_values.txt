@@ -6,11 +6,7 @@
 				carnx_employs_slave_as_court_position_trigger = { TYPE = court_mage_position }
 			}
 		}
-		multiply = {
-			value = carnx_court_position_slave_salary_multiplier
-			desc = carnx_slave_salary_mod
-			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-		}
+		multiply = carnx_court_position_salary_slave_multiplier
 	}
 }
 
@@ -22,11 +18,7 @@ carnx_court_position_loremaster_salary = {
 				carnx_employs_slave_as_court_position_trigger = { TYPE = loremaster_court_position }
 			}
 		}
-		multiply = {
-			value = carnx_court_position_slave_salary_multiplier
-			desc = carnx_slave_salary_mod
-			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-		}
+		multiply = carnx_court_position_salary_slave_multiplier
 	}
 }
 
@@ -38,11 +30,7 @@ carnx_court_position_shadowscale_salary = {
 				carnx_employs_slave_as_court_position_trigger = { TYPE = shadowscale_court_position }
 			}
 		}
-		multiply = {
-			value = carnx_court_position_slave_salary_multiplier
-			desc = carnx_slave_salary_mod
-			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-		}
+		multiply = carnx_court_position_salary_slave_multiplier
 	}
 }
 
@@ -54,11 +42,7 @@ carnx_court_position_speaker_salary = {
 				carnx_employs_slave_as_court_position_trigger = { TYPE = speaker_court_position }
 			}
 		}
-		multiply = {
-			value = carnx_court_position_slave_salary_multiplier
-			desc = carnx_slave_salary_mod
-			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
-		}
+		multiply = carnx_court_position_salary_slave_multiplier
 	}
 }
 
