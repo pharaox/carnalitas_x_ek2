@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.8.5
+
+* Adapted to changes in CSR 0.9.6
+
 ## Version 0.8.4
 
 * Adapted to changes in CSR 0.9.4
