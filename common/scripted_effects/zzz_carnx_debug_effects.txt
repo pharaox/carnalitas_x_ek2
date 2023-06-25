@@ -5,6 +5,18 @@
 			# Religion
 			faith.religion = {
 				save_temporary_scope_as = $PREFIX$_religion
+				if = {
+					limit = { is_in_family = rf_aedra }
+					save_temporary_scope_value_as = { name = $PREFIX$_rf value = flag:aedra }
+				}
+				else_if = {
+					limit = { is_in_family = rf_aurbis }
+					save_temporary_scope_value_as = { name = $PREFIX$_rf value = flag:aurbis }
+				}
+				else_if = {
+					limit = { is_in_family = rf_daedra }
+					save_temporary_scope_value_as = { name = $PREFIX$_rf value = flag:daedra }
+				}
 			}
 
 			# Government
