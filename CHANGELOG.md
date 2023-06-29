@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.8.6
+
+* Integrated EK2 changes to hostile_murder_agent_base_join_chance_modifier
+
 ## Version 0.8.5
 
 * Adapted to changes in CSR 0.9.6
